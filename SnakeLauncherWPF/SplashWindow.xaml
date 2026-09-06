@@ -1,0 +1,25 @@
+<Window x:Class="SnakeLauncherWPF.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="启动器"
+        Height="270" Width="480"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False">
+    <Border Background="{DynamicResource CardBackgroundBrush}"
+            CornerRadius="16"
+            Padding="40"
+            BorderBrush="{DynamicResource CardBorderBrush}"
+            BorderThickness="1"
+            Effect="{DynamicResource DropShadowEffect}">
+        <TextBlock Text="贪吃蛇启动器"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   Foreground="{DynamicResource AccentBrush}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center" />
+    </Border>
+</Window>
