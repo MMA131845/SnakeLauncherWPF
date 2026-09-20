@@ -1,0 +1,98 @@
+<Window x:Class="SnakeLauncherWPF.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="启动器"
+        Height="300" Width="520"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        UseLayoutRounding="True"
+        SnapsToDevicePixels="True">
+	<Grid Margin="14">
+		<!-- 玻璃阴影层 -->
+		<Border CornerRadius="28" Background="#00000000" Opacity="0.35">
+			<Border.Effect>
+				<DropShadowEffect ShadowDepth="10" BlurRadius="40" Opacity="0.55"
+                                  Color="{DynamicResource SplashShadowColor}"/>
+			</Border.Effect>
+		</Border>
+
+		<!-- 玻璃主体 -->
+		<Border CornerRadius="28" BorderThickness="1"
+                Background="{DynamicResource SplashGlassBackgroundBrush}"
+                BorderBrush="{DynamicResource SplashGlassBorderBrush}">
+			<Grid>
+				<!-- 内部彩色光斑，增加玻璃通透感 -->
+				<Grid ClipToBounds="True">
+					<Ellipse Width="260" Height="260"
+                             HorizontalAlignment="Left" VerticalAlignment="Top"
+                             Margin="-100,-100,0,0"
+                             Fill="{DynamicResource SplashBlob1Brush}">
+						<Ellipse.Effect>
+							<BlurEffect Radius="90"/>
+						</Ellipse.Effect>
+					</Ellipse>
+					<Ellipse Width="240" Height="240"
+                             HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                             Margin="0,0,-90,-90"
+                             Fill="{DynamicResource SplashBlob2Brush}">
+						<Ellipse.Effect>
+							<BlurEffect Radius="90"/>
+						</Ellipse.Effect>
+					</Ellipse>
+				</Grid>
+
+				<!-- 内容 -->
+				<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+					<TextBlock Text="贪吃蛇启动器"
+                               FontSize="34"
+                               FontWeight="Bold"
+                               FontFamily="Microsoft YaHei UI"
+                               Foreground="{DynamicResource AccentBrush}"
+                               HorizontalAlignment="Center"/>
+					<TextBlock Text="SNAKE LAUNCHER"
+                               FontSize="11"
+                               FontWeight="SemiBold"
+                               FontFamily="Segoe UI"
+                               Foreground="{DynamicResource SecondaryForegroundBrush}"
+                               Margin="0,6,0,24"
+                               HorizontalAlignment="Center"/>
+
+					<!-- 加载指示条 -->
+					<Border Width="180" Height="4" CornerRadius="2"
+                            Background="{DynamicResource SplashTrackBrush}">
+						<Border x:Name="LoadingBar"
+                                Width="60" Height="4"
+                                CornerRadius="2"
+                                HorizontalAlignment="Left"
+                                Background="{DynamicResource AccentBrush}">
+							<Border.RenderTransform>
+								<TranslateTransform x:Name="LoadingTransform" X="0"/>
+							</Border.RenderTransform>
+						</Border>
+					</Border>
+				</StackPanel>
+			</Grid>
+		</Border>
+	</Grid>
+
+	<Window.Triggers>
+		<EventTrigger RoutedEvent="Window.Loaded">
+			<BeginStoryboard>
+				<Storyboard RepeatBehavior="Forever">
+					<DoubleAnimation Storyboard.TargetName="LoadingTransform"
+                                     Storyboard.TargetProperty="X"
+                                     From="0" To="120" Duration="0:0:1.6"
+                                     AutoReverse="True">
+						<DoubleAnimation.EasingFunction>
+							<CubicEase EasingMode="EaseInOut"/>
+						</DoubleAnimation.EasingFunction>
+					</DoubleAnimation>
+				</Storyboard>
+			</BeginStoryboard>
+		</EventTrigger>
+	</Window.Triggers>
+</Window>
