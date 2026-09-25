@@ -9,7 +9,7 @@
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-0078D4?style=flat-square&logo=windows)](https://www.microsoft.com/windows)
 [![.NET](https://img.shields.io/badge/.NET%20Framework-4.8-512BD4?style=flat-square&logo=dotnet)](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 [![WPF](https://img.shields.io/badge/UI-WPF-68217A?style=flat-square)](https://learn.microsoft.com/dotnet/desktop/wpf/)
-[![Version](https://img.shields.io/badge/version-4.1.0-00b7c3?style=flat-square)](https://github.com/MMA131845/SnakeLauncherWPF/releases)
+[![Version](https://img.shields.io/badge/version-5.3.0-00b7c3?style=flat-square)](https://github.com/MMA131845/SnakeLauncherWPF/releases)
 [![License](https://img.shields.io/badge/license-MIT-00cc6a?style=flat-square)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/MMA131845/SnakeLauncherWPF?style=flat-square&color=ff763b)](https://github.com/MMA131845/SnakeLauncherWPF/stargazers)
 
