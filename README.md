@@ -8,13 +8,11 @@
 ![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/platform-Windows-0078D4?style=for-the-badge&logo=windows)
 
+# 贪吃蛇启动器 (SnakeLauncherWPF)
+
 **一款为「自由贪吃蛇」系列打造的现代化启动器**
 
 Liquid Glass 设计 | IPC 实时通信 | 多版本管理 | 反作弊系统 | 自动更新 | 多语言
-
-[项目简介](#项目简介) | [功能特性](#功能特性) | [快速开始](#快速开始) | [界面说明](#界面说明) | [项目结构](#项目结构) | [技术亮点](#技术亮点)
-
-</div>
 
 ---
 
@@ -40,20 +38,16 @@ v4.1.0 在 v4.0.0 的基础上，新增了 **反作弊系统**、**Python 依赖
 ### 五大页面
 
 | 页面 | 功能概述 |
-|:----:|----------|
-| 启动 | 扫描并列出本地所有游戏版本，一键启动，右键重命名 / 打开目录 |
-| 下载 | 从 GitHub Releases 拉取版本列表，支持两个仓库切换下载 |
-| 数据 | 累计游玩时长、启动次数、历史最高分、累计击杀、会话记录 |
-| 设置 | 游戏目录、下载路径、主题、主题色、语言、配置导入导出、更新检查 |
-| 关于 | 版本信息、开发者、版权说明 |
+|------|----------|
+| **启动** | 扫描并列出本地所有游戏版本，一键启动，右键重命名 / 打开目录 |
+| **下载** | 从 GitHub Releases 拉取版本列表，支持两个仓库切换下载 |
+| **数据** | 累计游玩时长、启动次数、历史最高分、累计击杀、会话记录 |
+| **设置** | 游戏目录、下载路径、主题、主题色、语言、配置导入导出、更新检查 |
+| **关于** | 版本信息、开发者、版权说明 |
 
 ### 核心亮点
 
-<table>
-<tr>
-<td width="50%">
-
-**双分支版本管理**
+#### 双分支版本管理
 
 - 同时识别 C# 与 Python 版游戏
 - 支持 5 种目录布局自动扫描
@@ -61,10 +55,7 @@ v4.1.0 在 v4.0.0 的基础上，新增了 **反作弊系统**、**Python 依赖
 - 同名版本去重，优先保留 EXE
 - 支持手动添加
 
-</td>
-<td width="50%">
-
-**实时 IPC 通信**
+#### 实时 IPC 通信
 
 - Named Pipe 管道名 `SnakeGameFPSPipe`
 - 500ms 级状态推送
@@ -72,12 +63,7 @@ v4.1.0 在 v4.0.0 的基础上，新增了 **反作弊系统**、**Python 依赖
 - 连接状态灯（灰 / 绿）
 - 断开自动重连
 
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-**反作弊系统**
+#### 反作弊系统
 
 - 游戏 EXE 文件 SHA256 白名单校验
 - IPC 消息 HMAC-SHA256 签名验证
@@ -85,10 +71,7 @@ v4.1.0 在 v4.0.0 的基础上，新增了 **反作弊系统**、**Python 依赖
 - 分数 / 击杀增速合理性检测
 - 检测到作弊弹通知，不中断游戏
 
-</td>
-<td width="50%">
-
-**Python 依赖管理**
+#### Python 依赖管理
 
 - 自动检测 Python 3.8+ 环境
 - 检测 pygame / pywin32 是否安装
@@ -96,12 +79,7 @@ v4.1.0 在 v4.0.0 的基础上，新增了 **反作弊系统**、**Python 依赖
 - 失败时提供手动安装指引
 - 未装 Python 时引导跳转官网
 
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-**Liquid Glass UI**
+#### Liquid Glass UI
 
 - 无边框窗口，WindowChrome 原生拖拽缩放
 - 三个背景彩色光斑缓慢漂移
@@ -109,10 +87,7 @@ v4.1.0 在 v4.0.0 的基础上，新增了 **反作弊系统**、**Python 依赖
 - 主题切换实时刷新全部 DynamicResource
 - 强调色自动计算前景色（黑 / 白）
 
-</td>
-<td width="50%">
-
-**启动器自更新**
+#### 启动器自更新
 
 - 基于 GitHub Releases 检查新版本
 - SHA256 完整性校验
@@ -120,32 +95,19 @@ v4.1.0 在 v4.0.0 的基础上，新增了 **反作弊系统**、**Python 依赖
 - 失败自动回滚
 - 备份目录延迟清理
 
-</td>
-</tr>
-<tr>
-<td width="50%">
+#### 多语言支持
 
-**多语言支持**
-
-- 简体中文 / English / Deutsch
-- Français / Русский
+- 简体中文 / English / Deutsch / Français / Русский
 - 切换即时生效，无需重启
 - 语言文件内嵌，零外部依赖
 
-</td>
-<td width="50%">
-
-**数据统计**
+#### 数据统计
 
 - 累计游玩时长 / 启动次数
 - 历史最高分 / 累计击杀
 - 按游戏分组的最佳成绩
 - 最近 15 局详细记录
 - 快速继续上次游戏
-
-</td>
-</tr>
-</table>
 
 ---
 
@@ -166,7 +128,6 @@ git clone https://github.com/MMA131845/SnakeLauncherWPF.git
 cd SnakeLauncherWPF
 
 # 用 Visual Studio 打开 SnakeLauncherWPF.sln
-
 # 或使用 MSBuild 命令行
 msbuild SnakeLauncherWPF.csproj /p:Configuration=Release
 ```
@@ -228,11 +189,11 @@ msbuild SnakeLauncherWPF.csproj /p:Configuration=Release
 - 总览卡片：累计游玩 / 启动次数 / 历史最高分 / 累计击杀
 - 继续游戏卡片：显示最近一局的游戏名与时间
 - 各游戏最佳成绩：按游戏分组，展示最高分、击杀、总局数
-- 最近对局列表：时间 / 游戏 / 模式 / 时长 / 分数 / 击杀
+- 最近对局记录：最多显示 15 条
 
 ### 设置页
 
-- 游戏目录：列表管理，支持添加 / 删除 / 应用
+- 游戏目录：添加 / 删除 / 应用选中目录
 - 下载路径：自定义下载 zip 存储位置
 - 主题模式：浅色 / 深色切换
 - 语言：简中 / 英 / 德 / 法 / 俄
@@ -269,7 +230,7 @@ msbuild SnakeLauncherWPF.csproj /p:Configuration=Release
 ### 键盘与鼠标
 
 | 操作 | 功能 |
-|:----:|------|
+|------|------|
 | 鼠标左键拖动标题栏 | 移动窗口 |
 | 双击标题栏 | 最大化 / 还原窗口 |
 | 点击 Tab | 切换页面 |
@@ -282,7 +243,7 @@ msbuild SnakeLauncherWPF.csproj /p:Configuration=Release
 启动器通过 Named Pipe 与游戏通信，只支持特定版本范围：
 
 | 游戏类型 | 版本范围 |
-|:--------:|:--------:|
+|----------|----------|
 | Python | 2.2.0 ~ 2.4.0 |
 | Python | 2.15.4 ~ 3.0.5 |
 | Python | v5.x 系列（新增 IPC 签名） |
@@ -308,43 +269,35 @@ IPC 消息通过 HMAC-SHA256 签名 + 30 秒时间戳窗口防重放：
 
 ## 项目结构
 
-```text
+```
 SnakeLauncherWPF/
 │
 ├── 启动器主程序
-│   ├── App.xaml(.cs)                 全局资源 + 启动流程 + 全局异常捕获
-│   ├── MainWindow.xaml(.cs)          无边框窗口 + 五大页面 + 进程管理
-│   ├── SplashWindow.xaml(.cs)        启动画面（3 秒展示后淡出）
-│   ├── Lang.cs                       多语言资源（简中 / 英 / 德 / 法 / 俄）
-│   ├── IpcService.cs                 Named Pipe 服务器 + 反作弊集成
-│   ├── AntiCheat.cs                  HMAC 校验 + 会话合理性追踪
-│   ├── PythonDependencyManager.cs    Python 环境与依赖检测 / 安装
-│   ├── GitHubReleaseService.cs       GitHub Releases 多仓库拉取
-│   ├── UpdateService.cs              启动器自更新服务
+│   ├── App.xaml(.cs)                        全局资源 + 启动流程 + 全局异常捕获
+│   ├── MainWindow.xaml(.cs)                 无边框窗口 + 五大页面 + 进程管理
+│   ├── SplashWindow.xaml(.cs)               启动画面（3 秒展示后淡出）
+│   ├── Lang.cs                              多语言资源（简中 / 英 / 德 / 法 / 俄）
+│   ├── IpcService.cs                        Named Pipe 服务器 + 反作弊集成
+│   ├── AntiCheat.cs                         HMAC 校验 + 会话合理性追踪
+│   ├── PythonDependencyManager.cs           Python 环境与依赖检测 / 安装
+│   ├── GitHubReleaseService.cs              GitHub Releases 多仓库拉取
+│   ├── UpdateService.cs                     启动器自更新服务
 │   └── ConfigData / ThemeManager / GameStatsManager（内嵌于 MainWindow.xaml.cs）
 │
 ├── 更新程序（独立进程）
 │   ├── SnakeLauncherWPF.Updater.csproj
-│   ├── App.xaml(.cs)                 主题跟随主程序
-│   ├── MainWindow.xaml(.cs)          更新进度 UI
-│   ├── UpdateEngine.cs               解压 / 备份 / 覆盖 / 回滚引擎
-│   └── Program.cs                    （保留的传统入口）
+│   ├── App.xaml(.cs)                        主题跟随主程序
+│   ├── MainWindow.xaml(.cs)                 更新进度 UI
+│   ├── UpdateEngine.cs                      解压 / 备份 / 覆盖 / 回滚引擎
+│   └── Program.cs                           （保留的传统入口）
 │
 ├── 项目配置
-│   ├── SnakeLauncherWPF.csproj       Visual Studio 工程文件
-│   ├── packages.config               NuGet 依赖清单
-│   └── Properties/                   程序集信息与资源
+│   ├── SnakeLauncherWPF.csproj              Visual Studio 工程文件
+│   ├── packages.config                      NuGet 包引用
+│   └── App.config                           运行时配置
 │
-├── 内嵌资源
-│   ├── Resources/SnakeGame_*.zip     内嵌版本包
-│   └── Versions/SnakeGame_*.zip      本地版本包
-│
-└── 运行时生成
-    ├── launcher_config.json          启动器配置（JSON）
-    ├── game_stats.json               游戏统计（启动次数 / 时长）
-    ├── game_history.json             会话历史（最近 50 条）
-    ├── game_hashes.json              反作弊哈希白名单
-    └── _backup_*/                    更新时的旧文件备份
+└── 资源文件
+    └── Resources/                           内嵌游戏包 ZIP 资源
 ```
 
 ---
@@ -353,375 +306,61 @@ SnakeLauncherWPF/
 
 ### 1. Liquid Glass 无边框窗口
 
-使用 `WindowChrome` 实现无边框窗口，同时保留原生拖拽、缩放、最大化行为：
+主窗口采用 `WindowStyle="None"` + `AllowsTransparency="True"`，配合 `WindowChrome` 实现原生拖拽缩放。背景由三个彩色椭圆光斑组成，每个光斑独立执行随机漂移动画（6~15 秒周期，SineEase 缓动），通过 `TranslateTransform` 持续改变位置。
 
-```xml
-<shell:WindowChrome.WindowChrome>
-    <shell:WindowChrome GlassFrameThickness="-1"
-                        ResizeBorderThickness="5"
-                        CaptionHeight="0"
-                        CornerRadius="0"
-                        NonClientFrameEdges="None"/>
-</shell:WindowChrome.WindowChrome>
-```
+### 2. 主题系统与强调色
 
-`CaptionHeight="0"` 表示标题栏区域不参与拖动，由代码在 `TitleBar_MouseLeftButtonDown` 中调用 `DragMove()` 手动实现，双击切换最大化。
-
-### 2. 动态背景光斑
-
-主窗口内嵌三个模糊椭圆，通过 `TranslateTransform` 做无限随机漂移：
+`ThemeManager` 在运行时动态替换 `Application.Current.Resources` 中的所有画刷。强调色会自动计算亮度并选择黑 / 白前景色：
 
 ```csharp
-private void AnimateBlobLoop(TranslateTransform transform, double minSec, double maxSec, double range)
-{
-    double targetX = (_blobRandom.NextDouble() - 0.5) * 2 * range;
-    double targetY = (_blobRandom.NextDouble() - 0.5) * 2 * range;
-    double seconds = minSec + _blobRandom.NextDouble() * (maxSec - minSec);
-
-    var animX = new DoubleAnimation(transform.X, targetX, TimeSpan.FromSeconds(seconds))
-    {
-        EasingFunction = new SineEase { EasingMode = EasingMode.EaseInOut }
-    };
-    animX.Completed += (s, e) => AnimateBlobLoop(transform, minSec, maxSec, range);
-    transform.BeginAnimation(TranslateTransform.XProperty, animX);
-}
+double luminance = (0.299 * accent.R + 0.587 * accent.G + 0.114 * accent.B) / 255.0;
+resources["AccentForegroundBrush"] = new SolidColorBrush(
+    luminance > 0.6 ? Colors.Black : Colors.White);
 ```
 
-每个光斑独立运行，速度与范围各不相同，动画完成后自动递归，形成无限循环。
+### 3. Named Pipe IPC 通信
 
-### 3. Named Pipe IPC 与反作弊
-
-启动器作为管道服务端，游戏作为客户端：
-
-```csharp
-_server = new NamedPipeServerStream(
-    "SnakeGameFPSPipe",
-    PipeDirection.In,
-    maxNumberOfServerInstances: 1,
-    PipeTransmissionMode.Byte,
-    PipeOptions.Asynchronous
-);
-await _server.WaitForConnectionAsync();
-```
-
-数据格式为单行文本，带时间戳与 HMAC 签名：
-
-```text
-FPS:60,SCORE:120,KILLS:5,MODE:classic,TS:1735780000,SIG:abc123...
-```
-
-启动器接收后进行三重校验：
-
-```csharp
-if (!AntiCheat.VerifyIpcLine(line, out string cleanPayload, out string reason))
-{
-    CheatDetected?.Invoke(reason);
-    continue;
-}
-
-var stats = ParseLine(cleanPayload);
-SessionTracker.Feed(ts, stats.Score, stats.Kills);
-if (SessionTracker.IsSuspicious)
-    CheatDetected?.Invoke(SessionTracker.SuspiciousReason);
-```
+`IpcService` 在后台线程启动 `NamedPipeServerStream`（管道名 `SnakeGameFPSPipe`），持续读取游戏推送的状态行，解析后通过 `Dispatcher.Invoke` 更新 UI。每次启动会话重置 `SessionTracker`，支持自动重试解决管道占用问题。
 
 ### 4. HMAC-SHA256 消息签名
 
-`AntiCheat` 使用硬编码 32 字节密钥对 payload 签名：
-
-```csharp
-private static string ComputeHmac(string payload)
-{
-    using (var h = new HMACSHA256(RootKey))
-    {
-        byte[] mac = h.ComputeHash(Encoding.UTF8.GetBytes(payload));
-        var sb = new StringBuilder(mac.Length * 2);
-        foreach (var b in mac) sb.Append(b.ToString("x2"));
-        return sb.ToString();
-    }
-}
-```
-
-校验时同时检查时间戳，超过 30 秒容忍窗口即视为重放攻击：
-
-```csharp
-long now = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-if (Math.Abs(now - ts) > TimestampToleranceSeconds)
-{
-    errorReason = "时间戳过期（可能重放）";
-    return false;
-}
-```
+`AntiCheat` 使用硬编码 32 字节密钥对 payload 签名，校验时同时检查时间戳，超过 30 秒容忍窗口即视为重放攻击。
 
 ### 5. 会话数据合理性检测
 
-追踪每帧的分数与击杀变化率，异常增速即告警：
-
-```csharp
-public void Feed(long ts, int score, int kills)
-{
-    if (_lastTs > 0 && ts > _lastTs)
-    {
-        double dt = ts - _lastTs;
-        if (dt > 0)
-        {
-            double scoreRate = (score - _lastScore) / dt;
-            double killRate = (kills - _lastKills) / dt;
-
-            if (scoreRate > MaxScoreRatePerSecond)
-            {
-                IsSuspicious = true;
-                SuspiciousReason = $"分数增速异常 ({scoreRate:F0}/秒)";
-            }
-            // ...
-        }
-    }
-}
-```
-
-阈值设为分数 800/秒、击杀 8/秒，正常游戏不可能触及。
+追踪每帧的分数与击杀变化率，异常增速即告警。阈值设为分数 800/秒、击杀 8/秒，正常游戏不可能触及。
 
 ### 6. Python 依赖自动管理
 
-启动 Python 版游戏前自动检测依赖：
-
-```csharp
-public static async Task<bool> IsPackageInstalledAsync(string packageName, string pythonExe = "python")
-{
-    var psi = new ProcessStartInfo
-    {
-        FileName = pythonExe,
-        Arguments = $"-m pip show {packageName}",
-        UseShellExecute = false,
-        RedirectStandardOutput = true,
-        RedirectStandardError = true,
-        CreateNoWindow = true
-    };
-
-    using (var proc = Process.Start(psi))
-    {
-        string output = await proc.StandardOutput.ReadToEndAsync();
-        await Task.Run(() => proc.WaitForExit(10000));
-        return proc.ExitCode == 0
-            && output.IndexOf($"Name: {packageName}", StringComparison.OrdinalIgnoreCase) >= 0;
-    }
-}
-```
-
-安装时先升级 pip 再安装目标包，超时 120 秒。失败后返回详细错误信息，启动器弹窗展示 `pip install xxx` 手动命令。
+启动 Python 版游戏前自动检测依赖，使用 `python -m pip show {packageName}` 检查包是否已安装。安装时先升级 pip 再安装目标包，超时 120 秒。
 
 ### 7. 启动器自更新
 
-`UpdateService` 从 GitHub Releases API 拉取最新版本：
-
-```csharp
-string apiUrl = $"https://api.github.com/repos/{GitHubOwner}/{GitHubRepo}/releases/latest";
-```
-
-下载后校验 SHA256（可选，从 Release body 的 `<!-- SHA256: xxx -->` 注释中提取）：
-
-```csharp
-public static bool VerifySha256(string filePath, string expectedSha256)
-{
-    using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read))
-    using (var sha = SHA256.Create())
-    {
-        byte[] hashBytes = sha.ComputeHash(stream);
-        string computed = BitConverter.ToString(hashBytes).Replace("-", "").ToLowerInvariant();
-        return string.Equals(computed, expectedSha256.Trim().ToLowerInvariant(), StringComparison.Ordinal);
-    }
-}
-```
-
-校验通过后把 Updater 复制到临时目录再启动，避免 Updater 锁定自身。Updater 完成文件替换后自动重启主程序。
+`UpdateService` 从 GitHub Releases API 拉取最新版本，下载后校验 SHA256（从 Release body 的 `<!-- SHA256: ... -->` 注释中提取）。校验通过后把 Updater 复制到临时目录再启动，避免 Updater 锁定自身。
 
 ### 8. 独立更新引擎
 
-`UpdateEngine` 支持完整的更新流程，任何一步失败都能回滚：
+`UpdateEngine` 支持完整的更新流程，任何一步失败都能回滚。更新阶段包括：等待主进程退出、清理旧备份、解压、备份、复制文件、启动新版本、完成。
 
-```csharp
-public enum UpdateStage
-{
-    WaitingForMainExit,
-    CleaningOldBackups,
-    Extracting,
-    BackingUp,
-    CopyingFiles,
-    Launching,
-    Completed
-}
-```
+### 9. 多语言内嵌字典
 
-关键设计：
+采用内嵌字典，零外部依赖。切换语言后触发 `LanguageChanged` 事件，主窗口重建顶部栏、按钮、当前标签页。全部 5 种语言覆盖 200 多个键。
 
-- 等待主进程完全退出，最多 60 秒
-- 清理上次更新残留的 `_backup_*` 和 `*.old_*`
-- 备份所有将被覆盖的旧文件
-- 逐文件复制并上报进度
-- 任何一步异常都尝试 `TryRollback`
-- 更新成功后不删备份，由新主程序启动时清理
+### 10. 智能版本扫描
 
-### 9. 多仓库 GitHub 拉取
+`ScanGamesAsync` 支持 5 种目录布局，版本号来源优先级为：父目录名匹配 → EXE 文件版本信息 → 文件名中的版本号正则。扫描后按路径去重、按版本号去重（优先保留非 Python）。
 
-`GitHubReleaseService` 支持同时管理多个仓库：
+### 11. 安全删除
 
-```csharp
-public static readonly List<GitHubRepoConfig> Repos = new List<GitHubRepoConfig>
-{
-    new GitHubRepoConfig
-    {
-        Owner = "MMA131845",
-        Repo = "SnakeGameWpf",
-        DisplayName = "SnakeGameWpf（C#）",
-        IsPythonRepo = false,
-        GamePackagePattern = new Regex(@"^SnakeGameWpf_(\d+(?:\.\d+){1,3})\.zip$",
-            RegexOptions.IgnoreCase | RegexOptions.Compiled),
-    },
-    new GitHubRepoConfig
-    {
-        Owner = "MMA131845",
-        Repo = "Snake-Game-Python-Edition-",
-        DisplayName = "贪吃蛇 Python 版",
-        IsPythonRepo = true,
-        GamePackagePattern = new Regex(@"^SnakeGamePython_(\d+(?:\.\d+){1,3})\.zip$",
-            RegexOptions.IgnoreCase | RegexOptions.Compiled),
-    }
-};
-```
+删除游戏时进行多重安全检查，拒绝删除磁盘根目录和启动器自身目录，同时判断父目录是否还有其他游戏文件。
 
-每个 Asset 的名称用正则解析出版本号，`IsGamePackage` 标记是否符合规范。拉取后按版本号降序、发布时间降序排列。
+### 12. 配置原子写入
 
-### 10. 自绘对话框系统
+`ConfigManager.Save` 采用临时文件 + 原子替换策略，避免写入中断导致配置文件损坏。
 
-统一风格的对话框体系，避免原生 MessageBox 突兀：
+### 13. ZIP 结构严格校验
 
-| 对话框 | 用途 |
-|:------:|------|
-| Compatibility | 单按钮提示，用于版本不兼容、文件完整性失败 |
-| Confirm | 是 / 否双按钮，用于进程替换、删除确认 |
-| Info | 单按钮提示，用于主题切换提醒 |
-| DownloadPath | 三按钮，用于下载路径确认 |
-| AutoUpdate | 三按钮，用于新版本提示 |
-
-它们都使用相同模式：全屏半透明遮罩 + 居中面板 + 缩放动画，通过 `TaskCompletionSource<bool>` 提供 `await` 支持。
-
-### 11. 多语言系统
-
-`Lang.cs` 采用内嵌字典，零外部依赖：
-
-```csharp
-public static string T(string key)
-{
-    if (string.IsNullOrEmpty(key)) return "";
-    if (_dict != null && _dict.TryGetValue(key, out var v) && v != null) return v;
-    return key;
-}
-```
-
-支持带参数格式化：
-
-```csharp
-public static string T(string key, params object[] args)
-{
-    var s = T(key);
-    if (args == null || args.Length == 0) return s;
-    try { return string.Format(s, args); }
-    catch { return s; }
-}
-```
-
-切换语言后触发 `LanguageChanged` 事件，主窗口重建顶部栏、按钮、当前标签页。全部 5 种语言覆盖 200 多个键。
-
-### 12. 智能版本扫描
-
-`ScanGamesAsync` 支持 5 种目录布局：
-
-```csharp
-// A. <baseDir>/<版本目录>/dist/贪吃蛇.exe
-// B. <baseDir>/SnakeGame.exe
-// C. <baseDir>/**.py（递归）
-// D. <baseDir>/**.SnakeGameWpf.exe（递归）
-// E. <baseDir>/<版本目录>/SnakeGame.exe
-```
-
-版本号来源优先级：
-
-1. 父目录名匹配 `\d+\.\d+\.\d+`
-2. EXE 文件版本信息
-3. 文件名中的版本号正则
-
-扫描后按路径去重、按版本号去重（优先保留非 Python），保证同一版本只显示一张卡片。
-
-### 13. 安全删除
-
-删除游戏时进行多重安全检查：
-
-```csharp
-string parentDir = Path.GetDirectoryName(gamePath);
-string root = Path.GetPathRoot(gamePath);
-
-if (string.IsNullOrEmpty(parentDir)
-    || string.Equals(parentDir, root, StringComparison.OrdinalIgnoreCase))
-{
-    ShowNotification(Lang.T("Detail.RootRefused"));
-    return;
-}
-
-string launcherDir = AppDomain.CurrentDomain.BaseDirectory.TrimEnd('\\', '/');
-if (string.Equals(parentDir.TrimEnd('\\', '/'), launcherDir, StringComparison.OrdinalIgnoreCase))
-{
-    ShowNotification(Lang.T("Detail.LauncherDirRefused"));
-    return;
-}
-```
-
-同时判断父目录是否还有其他游戏文件，若无则删除整个目录，否则只删除游戏文件。
-
-### 14. 配置原子写入
-
-`ConfigManager.Save` 采用临时文件 + 原子替换策略，避免写入中断导致配置文件损坏：
-
-```csharp
-string tempPath = ConfigPath + ".tmp";
-using (var fs = new FileStream(tempPath, FileMode.Create, FileAccess.Write, FileShare.Read, 4096, FileOptions.WriteThrough))
-using (var sw = new StreamWriter(fs, new UTF8Encoding(false)))
-{
-    sw.Write(json);
-    sw.Flush();
-    fs.Flush(true);
-}
-
-for (int i = 0; i < 5; i++)
-{
-    try
-    {
-        if (File.Exists(ConfigPath))
-            File.Replace(tempPath, ConfigPath, null, ignoreMetadataErrors: true);
-        else
-            File.Move(tempPath, ConfigPath);
-        return;
-    }
-    catch (IOException)
-    {
-        System.Threading.Thread.Sleep(50 * (i + 1));
-    }
-}
-```
-
-### 15. ZIP 结构严格校验
-
-下载的游戏包必须满足命名规范和内容规范：
-
-```csharp
-// Python 包：根目录有任意 .py 文件
-// C# 包：必须同时包含以下四项
-//   - SnakeGame.exe / SnakeGameWpf.exe
-//   - SnakeGame.dll / SnakeGameWpf.dll
-//   - Newtonsoft.Json.dll
-//   - SnakeGame.runtimeconfig.json
-```
-
-缺一即判定为非法包，避免用户下载到残缺版本导致游戏无法启动。
+下载的游戏包必须满足命名规范和内容规范。C# 包必须同时包含 EXE、主 DLL、Newtonsoft.Json.dll、runtimeconfig.json，缺一即判定为非法包。
 
 ---
 
@@ -740,83 +379,40 @@ for (int i = 0; i < 5; i++)
 - 下载页支持多仓库切换（C# 版 / Python 版）
 - 下载前弹出路径确认对话框
 - ZIP 结构严格校验
-- 配置原子写入，避免文件损坏
-
-**修复**
-
-- 修复配置文件被占用导致写入失败
-- 修复部分游戏无法被扫描到
-- 修复主题切换后部分控件未刷新
-- 修复下载中断残留临时文件
-- 修复游戏进程结束后统计未写入
-
-### v4.0.0
-
-**重大变更**
-
-- 采用 Liquid Glass（液态玻璃）视觉风格
-- 全局无边框窗口，支持原生缩放与最大化
-- 三个动态背景光斑，随机漂移效果
-- 自绘对话框体系（兼容性 / 确认 / 信息）
-- 主题系统重构，浅色与深色各自维护完整资源
-- 6 种预设主题色，实时切换无需重启
-- 底部状态栏新增「连接状态灯」
-
-**功能增强**
-
-- 下载页支持内嵌资源 / 本地 zip / HTTP 远程三种来源
-- 版本卡片点击弹出玻璃风格详情面板
-- 启动页新增「最新 EXE 版本」突出卡片
-- 卡片右键菜单支持重命名与打开目录
 
 ---
 
-## 贡献指南
+## 配套游戏项目
 
-欢迎提交 Issue 和 Pull Request。
+本启动器为「自由贪吃蛇」系列游戏提供统一管理。配套游戏 **SnakeGameWpf v7.0.0** 是一款从 WinForms 全面迁移到 WPF 的现代化贪吃蛇游戏，拥有五种游戏模式、局域网联机、主题系统和成就体系。
 
-```bash
-# Fork 后克隆
-git clone https://github.com/MMA131845/SnakeLauncherWPF.git
+| 项目 | 仓库地址 | 技术栈 |
+|------|----------|--------|
+| 启动器 | [SnakeLauncherWPF](https://github.com/MMA131845/SnakeLauncherWPF) | WPF (.NET Framework 4.8) |
+| 游戏 | [SnakeGameWpf](https://github.com/MMA131845/SnakeGameWpf) | WPF (.NET 10) |
 
-# 创建功能分支
-git checkout -b feature/amazing-feature
-
-# 提交修改
-git commit -m "feat: 添加新功能"
-
-# 推送分支
-git push origin feature/amazing-feature
-
-# 在 GitHub 上打开 Pull Request
-```
-
-### 代码规范
-
-- 使用 `PascalCase` 命名公开成员，`_camelCase` 命名私有字段
-- 所有 UI 资源通过 `SafeFindBrush` / `SafeFindStyle` 获取，避免空引用
-- 新增主题画刷时同步更新 `SetLightTheme` 与 `SetDarkTheme`
-- 新增自绘对话框时使用 `TaskCompletionSource<bool>` 模式
-- 新增字符串时同步更新 `Lang.cs` 中的 5 种语言字典
-- 涉及文件 IO 时优先使用 `FileShare.ReadWrite` 避免占用
+游戏支持经典模式、淘汰之王、占领模式、极限模式和搜打撤五种模式，通过 Named Pipe 向启动器上报 FPS、得分、击杀等状态数据。启动器的 IPC 状态栏、数据统计页面和反作弊系统均依赖游戏端的配合。
 
 ---
+
+## 致谢
+
+- 开发：没冇啊
+- 代码：ChatGPT、Gemini、Codex、DeepSeek、没冇啊
+- 美术设计：没冇啊
+- QA：没冇啊
+- 特别感谢：所有支持本游戏的玩家
+- [.NET Community](https://dotnet.microsoft.com/)：优秀的开发平台
+
+---
+
+**如果这个项目对你有帮助，欢迎点一个 Star**
+
+Made with love by MEIMAOA
 
 ## 开源协议
 
-本项目基于 **MIT License** 开源，详见 [LICENSE](LICENSE) 文件。
-
-```text
-MIT License
-
-Copyright (c) 2026 MEIMAOA
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction...
-```
-
----
+本项目基于 MIT License 开源，详见 [LICENSE](https://github.com/MMA131845/SnakeLauncherWPF/blob/main/LICENSE)。
 
 ## 致谢
 
